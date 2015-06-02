@@ -1,0 +1,4 @@
+- job:
+    name: 'MyJob'
+    builders:
+        - set-build-result: "ABORTED"
