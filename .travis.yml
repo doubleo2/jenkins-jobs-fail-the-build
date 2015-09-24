@@ -1,0 +1,14 @@
+language: python
+python:
+  - "2.7"
+install:
+  - python setup.py install
+script: jenkins-jobs test test.yml
+deploy:
+  provider: pypi
+  user: doubleo2
+  password:
+    secure: O8pYMJ+3Tq2wzx9fw99XSS3z0s77aRX8uFpsNimDCPi9Zsec8inFANdTsdDIyLEXTAro8xV06oaL5FzmQntASum01HOHDd8HuZxlEV3vYMpPRR7DSqve+BApdmaEk8J1u5OTYxJ9927cSbXiElmcvYj1owulPkm7hBaxDT7G+RSuiPnqyFMJxy9s4AKnA05h+8urzueWfPGoRVZHr2fypcONsId+BRlNYwhuctDUBhBeMYnOHIAjz3ouAhNtNtXS83p3Z/+g2+NUNUat6sniJ5+FN7nDh+uOxHTtGf4MKKPLyqjxCMvMAi8PMlVL/snzR6Dmk3c3MB2o2iyLcaldR6OJA4fpFZcQJ6OHTqs9uawSZaE9W76xCZwAHYq2CwlXKiO34BzGyLYWFjDmhKXIUR2qJMRQ3TYExAbfxV8e5TTrUQpawxJGrX8rKikvfS9Wa/yQd/E0RM0gwZQaxUzGezHkTTb3RV4NtR2cL+fQqIDx4sIOu2AdavD5gbaPUw6Ek6fa+Sbqy2QeDqj0bXUErJ+Cq4woHjYSmIZxyPPHThw9G7rE2eyjPmtzDR4yTIB6sAS3JMu9qCltwKi570YSEZWnLEXJMX+wyiYbEU8xz0B5yZiBT9fZC2ruRvkxEqfARoJNEN/e10Qvqvj0WgZQEKsDzYAqOTGy1abvsZasvO4=
+  on:
+    tags: true
+    repo: doubleo2/jenkins-jobs-fail-the-build
